@@ -77,7 +77,7 @@ class Assignment extends React.Component {
       return (
         <div>
           <div align="center" >
-            <h4>Add assignment</h4>
+            {/* <h4>Add assignment</h4>
             <br/>
             <TextField size="small" autoFocus style = {{width:200}} label="Assignment Name" name="name" 
              onChange={this.handleChange} value={this.state.attempt} /> 
@@ -92,7 +92,12 @@ class Assignment extends React.Component {
             <br/>
             <br/>
             <Button variant="outlined" color="primary" style={{margin: 10}}
-              onClick={this.handleSubmit} >Add Assignment</Button>
+              onClick={this.handleSubmit} >Add</Button> */}
+            <Button component={Link}
+                      to={{pathname:'/addAssignment'}}
+                variant="outlined" color="primary" style={{margin: 10}}>
+                Add Assignment 
+            </Button>
 
           </div>  
           <div align="left" >
