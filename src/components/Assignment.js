@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Radio from '@mui/material/Radio';
 import {DataGrid} from '@mui/x-data-grid';
 import {SERVER_URL} from '../constants.js'
+import TextField from '@mui/material/TextField';
 
 // NOTE:  for OAuth security, http request must have
 //   credentials: 'include' 
@@ -74,6 +75,31 @@ class Assignment extends React.Component {
       
       const assignmentSelected = this.state.assignments[this.state.selected];
       return (
+        <div>
+          <div align="center" >
+            {/* <h4>Add assignment</h4>
+            <br/>
+            <TextField size="small" autoFocus style = {{width:200}} label="Assignment Name" name="name" 
+             onChange={this.handleChange} value={this.state.attempt} /> 
+            <br/>
+            <br/>
+            <TextField size="small" autoFocus style = {{width:200}} label="Due Date" name="date" 
+             onChange={this.handleChange} value={this.state.attempt} /> 
+            <br/>
+            <br/>
+            <TextField size="small" autoFocus style = {{width:200}} label="Course" name="course" 
+             onChange={this.handleChange} value={this.state.attempt} /> 
+            <br/>
+            <br/>
+            <Button variant="outlined" color="primary" style={{margin: 10}}
+              onClick={this.handleSubmit} >Add</Button> */}
+            <Button component={Link}
+                      to={{pathname:'/addAssignment'}}
+                variant="outlined" color="primary" style={{margin: 10}}>
+                Add Assignment 
+            </Button>
+
+          </div>  
           <div align="left" >
             <h4>Assignment(s) ready to grade: </h4>
               <div style={{ height: 450, width: '100%', align:"left"   }}>
@@ -85,6 +111,7 @@ class Assignment extends React.Component {
             </Button>
             <ToastContainer autoClose={1500} /> 
           </div>
+        </div>
       )
   }
 }  
