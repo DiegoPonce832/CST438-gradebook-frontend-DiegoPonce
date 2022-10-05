@@ -172,8 +172,9 @@ class AddAssignment extends React.Component {
   handleSubmit = () => {
     let Name = document.getElementById('name').value
     let Date = document.getElementById('date').value
+    var num=25; 
     
-    fetch(`http://localhost:8081/add?id=${15}&name=${Name}&dueDate=${Date}`, 
+    fetch(`http://localhost:8081/add?id=${num}&name=${Name}&dueDate=${Date}`, 
     {
       method: 'POST',
       headers: {
@@ -187,6 +188,8 @@ class AddAssignment extends React.Component {
     })
       .then(response => response.json() )
       .catch(err => console.error(err))
+
+      num++; 
   }
  
   
