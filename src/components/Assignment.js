@@ -95,7 +95,7 @@ class Assignment extends React.Component {
               onClick={this.handleSubmit} >Add</Button> */}
             <Button component={Link}
                       to={{pathname:'/addAssignment'}}
-                variant="outlined" color="primary" style={{margin: 10}}>
+                variant="outlined" color="primary" id = "addAssignment" style={{margin: 10}}>
                 Add Assignment 
             </Button>
 
